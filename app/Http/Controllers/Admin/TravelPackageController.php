@@ -67,7 +67,9 @@ class TravelPackageController extends Controller
      */
     public function edit($id)
     {
-        $item = TravelPackage::findOrFails($id);// jika data di ada maka di munculkan jika tidak eror 404
+        // fungsi for take data berdasrkan id
+        $item = TravelPackage::findOrFail($id);// jika data di ada maka di munculkan jika tidak eror 404
+        return view('pages.admin.travel-package.update',['item'=>$item]);
     }
 
     /**
@@ -77,9 +79,15 @@ class TravelPackageController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(TravelPackageRequest $request, $id)
     {
-        //
+        $data= $request->all();//ambil semua isi form
+         $data['slug'] = Str::slug($request->title);
+         //create
+         $item = TravelPackage::findOrfail($id);//mencari data pd travel package yang id nya seuai
+         $item->update($data);//menjalankan fungsi update
+         
+         return redirect()->route('travel-package.index');
     }
 
     /**
@@ -90,6 +98,10 @@ class TravelPackageController extends Controller
      */
     public function destroy($id)
     {
-        //
+        
+        $item = TravelPackage::findOrFail($id);//menemukan data $id((parameter fungs)) di model travelpackage
+        $item->delete();
+
+        return redirect()->route('travel-package.index');
     }
 }

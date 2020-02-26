@@ -41,13 +41,14 @@
                                                 <i class="fa fa-pencil-alt"></i>
                                             </a>
                                             
-                                            <a href="{{route('travel-package.destroy',$item->id)}}" method="post" class="d-inline">
+                                            <form action="{{route('travel-package.destroy',$item->id)}}" method="post" class="d-inline">
                                                 @csrf
                                                 @method('delete')
                                                 <button class="btn btn-danger">
                                                     <i class="fa fa-trash"></i>
                                                 </button>
-                                            </a>
+                                            </form>
+                                            
                                         </td>
                                     </tr>
                                     @empty

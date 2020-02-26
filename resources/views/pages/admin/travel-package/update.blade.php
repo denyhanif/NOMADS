@@ -6,7 +6,7 @@
                 <div class="container-fluid">
                 <!-- Page Heading -->
                 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                    <h1 class="h3 mb-0 text-gray-800">Ubah Paket Travel{{$item->title}}</h1>
+                    <h1 class="h3 mb-0 text-gray-800">Ubah Paket Travel {{$item->title}}</h1>
                 </div>
                 {{--  eror msg  --}}
                 @if($errors->any())
@@ -30,7 +30,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="location">Location</label>
-                                <input type="text" class="form-control" name="location" placeholder="Location" value="{{$item->loacation}}">
+                                <input type="text" class="form-control" name="location" placeholder="Location" value="{{$item->location}}">
                             </div>
                             <div class="form-group">
                                 <label for="about">About</label>
@@ -54,15 +54,15 @@
                             </div>
                             <div class="form-group">
                                 <label for="duration">Duration</label>
-                                <input type="text" class="form-control" name="duration" placeholder="Durasi" value="{{old('duration')}}">
+                                <input type="text" class="form-control" name="duration" placeholder="Durasi" value="{{$item->duration}}">
                             </div>
                             <div class="form-group">
                                 <label for="type">Type</label>
-                                <input type="text" class="form-control" name="type" placeholder="Type" value="{{old('type')}}">
+                                <input type="text" class="form-control" name="type" placeholder="Type" value="{{$item->type}}">
                             </div>
                             <div class="form-group">
                                 <label for="price">Price</label>
-                                <input type="number" class="form-control" name="price" placeholder="Harga" value="{{old('price')}}">
+                                <input type="number" class="form-control" name="price" placeholder="Harga" value="{{$item->price}}">
                             </div>
                             <button type="submit" class="btn btn-primary btn-block">
                                 Ubah
