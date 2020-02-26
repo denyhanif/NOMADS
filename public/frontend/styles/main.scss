@@ -1,0 +1,451 @@
+body{
+    background-color: #ffffff;
+    font-family:'Assistant',sans-serif;
+    color: #071C4D;
+}
+
+.btn-login{
+    background-color: #071C4D;
+    color: #ffffffff;
+    &:hover{
+        background-color: #071C4D;
+        color: #ffffffff;
+    }
+
+}
+.navbar-brand{
+    img{
+        max-height: 40px;
+    }
+}
+
+.btn-navbar-right{
+    margin-top: -10px !important;
+    margin-bottom: -8px !important;
+    margin-right: -30px !important;
+
+    height: 70px;
+    border-radius: 0;
+    
+
+}
+
+.navbar-light{
+    .navbar-nav{
+        .nav-link{
+            color: #071C4D;
+            &.active{
+                font-weight: bold;
+                color: #071C4D;
+            }
+        }
+    }
+}
+// header
+header{
+    padding: 180px 0px 165px;
+    margin-top: -70px;
+    background-image: url('../images/header.jpg');
+    background-size: cover;
+    h1,p{
+        color: #ffffffff;
+        font-weight: bold;
+    }
+
+    h1{
+        font-family: 'Playfair Display',serif;
+        font-size: 50px;
+        font-weight: bold;
+    }
+
+    p{
+        font-size: 22px;
+
+    }
+    .btn-get-started{
+        background-color: #FF9E53;
+        color: #ffffffff;
+        &hover{
+            background-color: #FFAA69;
+            color: #ffffffff;
+
+        }
+    }
+}
+
+//kolom statistik
+.section-stats{
+    margin-top: -50px ;
+
+    .statis-detail{
+        padding-top: 15px;
+        background-color: #ffffffff;
+        border-radius: 5px;
+        padding-left: 40px;
+    }
+}
+
+h2{
+    font-size: 30px;
+    margin-bottom: 0;
+}
+p{
+    font-size: 20px;
+    font-weight: lighter;
+}
+//populAR
+.section-popular{
+    min-height:540px;
+    background-color: #05133D;
+    margin-top: -50px;
+    margin-bottom: -230px;
+}
+.section-popular-heading{
+    margin-top:150px;
+    h2,p{
+        color: #ffffffff;
+    }
+    h2{
+        font-family: 'Playfair Display',serif;
+        font-weight: bold;
+        font-size: 50px;
+    }    
+    p{
+        font-size: 18px;
+    }
+
+}
+//popular content
+.section-popular-content{
+    .section-popular-travel{
+        .card-travel{
+            min-height: 380px;
+            background-color: #E4E6EB;
+            color: #05133D;
+            padding:30px;
+            background-size: cover;
+            margin-bottom: 20px;
+        }
+
+        
+    }
+    .travel-country{
+        font-size: 18px;
+        color: #ffffff;
+    }
+    .travel-location{
+        font-size: 26px;
+        color: #ffffff;
+    }
+    .travel-button{
+        .btn-travel-detail{
+                
+        background-color: #FF9E53;
+        color: #E4E6EB;
+        &:hover{
+            background-color: #FFAA69;
+        color: #ffffff;
+        }
+        }
+    }
+
+
+}
+
+.section-network{
+    background-color: #ffffff;
+    padding-top: 240px;
+    margin-top: -170px;
+    padding-bottom: 50px;
+
+    h2{
+
+        font-family: 'Playfair Display',serif;
+
+        font-weight: bold;
+        font-size: 40px;
+        text-align: left;
+        color: #071c4d;
+
+    }
+    img{
+        max-width: 100%;
+    }
+}
+.section-testimonials-heading {
+    background: linear-gradient(#fff 0%, #f7f9ff 100%);
+    padding-top: 50px;
+    min-height: 506px;
+  
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-weight: bold;
+    }
+  }
+
+.section-testimonial-content{
+    margin-top: 100px;
+    padding-bottom: 50px;
+
+    .card-testimonial{
+        padding: 40px 20px 10px;
+        border-radius: 11px;
+        margin-bottom: 20px;
+        .testimonial-content{
+            min-height: 380px;
+
+        }
+        h3{
+            font-size: 22px;
+        }
+
+        .testimonial{
+            font-size: 26px;
+            text-align: center;
+            font-weight: 200;
+            color: #6e6e6e;
+
+        }
+        .trip-to{
+            font-weight: normal;
+            font-size: 22px;
+            color: #6e6e6e;
+
+        }
+        hr{
+            margin-left: -20px;
+            margin-right: -20px;
+        }
+
+    }
+
+    .btn-get-started{
+        background-color: #FF9E53;
+        color: #ffffffff;
+        &hover{
+            background-color: #FFAA69;
+            color: #ffffffff;
+
+        }
+    }
+    .btn-need-help{
+        background-color: #F2F2F2F2;
+        color: #C3C3C3C3;
+        &hover{
+            background-color: #FAFAFA;
+            color: #ffffffff;
+
+        }
+    }
+}
+.section-footer{
+    a{
+        color: #071C4D;
+    }
+}
+
+.section-details-header{
+    min-height: 300px;
+    background: #E4E6EB;
+    margin-top: -70px;
+
+}
+
+.section-details-content{
+    margin-top: -200px;
+    min-height: 100vh;
+    
+    .breadcrumb{
+        background-color: transparent;
+        padding: 0;
+        margin-bottom: 30px;
+    }
+    .breadcrumb-item{
+        &.active{
+            font-weight: bold;
+            color:#071c4d;
+
+        }
+    }
+
+    .card-details{
+        padding:30px;
+        border-radius: 12px;
+        h1{
+            font-size: 26px;
+
+        }
+        h2{
+            font-size: 20px;
+        }
+        p{
+            font-size: 18px;
+            color: #B1B1B1;
+        }
+        .trip-information{
+            th{
+                font-weight: 300;
+                font-size: 18px;
+                color: #071C4D;;
+
+            }
+            td{
+                font-weight: 300;
+                font-size: 18px;
+                color: #b1b1b1;
+
+            }
+
+            .text-blue{
+                color: #071c4d;
+                font-weight: bold;
+            }
+            .text-yellow{
+                color: #FF9E53;
+                font-weight: bold;
+            }
+
+        }
+        .payment-instructions{
+            font-weight: 300;
+            font-size: 14px;
+            color: #b1b1b1;
+        }
+
+        .datepicker{
+            border-right: 0;
+
+        }
+        .bank{
+            .bank-item{
+                h3{
+                    font-size: 18px;
+                    color: #05133D;
+                    margin-bottom: 0;
+                }
+                p{
+                    margin-bottom: 0;
+                }
+                .desc{
+                    margin-left: 10px;
+                    overflow: hidden;
+                    float: left;
+                    color: #071c4d;
+                    p{
+                        font-weight: normal;
+                        font-size: 16px;
+                        text-align: left;
+                        color: #071c4d;
+                    }
+                }
+            }
+            .bank-image{
+                width: 45px ;
+                height: 45px;
+                float: left;
+
+            }
+            
+        }
+        .input-group-append{
+            .btn{
+                padding-right: 30px;
+            }
+        }
+        label{
+            font-weight: bold;
+        }
+        h3{
+            font-size: 18px;
+            font-family: 'Assistant','serif';
+        }
+        p{
+           font-size: 14px; 
+           font-weight: bold;
+        }
+    }
+
+    .features{
+        margin-top: 20px;
+        h3{
+            font-size: 20px;
+            color: #071c4d;
+            margin-bottom: 0;
+        }
+        p{
+            margin-bottom: 0;
+        }
+        .desc{
+            margin-left: 10px;
+            overflow: hidden;
+            float:left;
+        }
+        .features-image{
+            width: 45px;
+            height: 45px;
+            float: left;
+        }
+    }
+
+    .gallery{
+        .xzoom-container{
+            display: block;
+            .xzoom{
+                width:100%;
+                box-shadow: none;
+                margin-bottom: 10px;
+            }
+            .xactive{
+                border: 3px solid #1ABC9C;
+                box-shadow: none;
+            }
+        }
+        
+    }
+    .member{
+        padding: 8px;
+
+        .member-image{
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    .card-right{
+        padding: 30px;
+        border-radius: 10px;
+        border-bottom-right-radius:0 ;
+        border-bottom-left-radius: 0;
+    }
+    .join-container{
+        margin-top: -20px;
+
+    }
+    .btn-join-now{
+        background-color: #FF9E53;
+        color: #FAFAFA;
+        &:hover{
+            background-color: #FFB57C;
+            color: #fff;
+
+        }
+
+    }
+.btn-add-now{
+    background-color: #05133D;
+    color: white;
+    &:hover{
+        background-color: #214db3;
+        color: #fff;
+    }
+}
+}
+//success
+.btn-home-page{
+    background-color: #071c4d;
+    color: #fff;
+    &:hover{
+        background-color: #214db3;
+        color: #fff;
+        }
+}
