@@ -4,7 +4,7 @@ namespace App\Http\Requests\Admin;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class GalleryRequest extends FormRequest
+class paketTravel extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -13,7 +13,7 @@ class GalleryRequest extends FormRequest
      */
     public function authorize()
     {
-        return true;
+        return false;
     }
 
     /**
@@ -24,10 +24,7 @@ class GalleryRequest extends FormRequest
     public function rules()
     {
         return [
-            'travel_packages_id'=> 'required|integer|exists:travel_packages,id',// validasi apakah travel benar ada di  tabeltravel package
-            'image'=>'required|image',
-            // 'travel_packages_id'=>'required|integer|exists:travel_packages,id',
-            // 'image'=>'required|image'
+            //
         ];
     }
 }

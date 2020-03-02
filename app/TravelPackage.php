@@ -20,7 +20,7 @@ class TravelPackage extends Model
     //relasi dengan tabel galer
     public function galleries(){
         //mendeskripsikan 1 travel ada banyak galeri
-        return $this->hasMany(Gallery::class,'travel_packages_id','id');
+        return $this->hasMany(Gallery::class,'travel_packages_id','id');// this = 1 travel pcakage--> 1 travel packaeg puny abanyak galeri
 
     }
 }

@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
-use App\Http\Requests\Admin\TravelPackageRequest;// req form isinya attribut
+//use App\Http\Requests\Admin\TravelPackageRequest;// req form isinya attribut
+use App\Http\Requests\Admin\ptReq;
 use App\Http\Controllers\Controller;
 use App\TravelPackage;
 use Illuminate\Http\Request;
@@ -39,7 +40,7 @@ class TravelPackageController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(TravelPackageRequest $request)
+    public function store(ptReq $request)
     {
          $data= $request->all();//ambil semua isi form
          $data['slug'] = Str::slug($request->title);
@@ -67,7 +68,7 @@ class TravelPackageController extends Controller
      */
     public function edit($id)
     {
-        // fungsi for take data berdasrkan id
+        // mengambil datadata berdasrkan id
         $item = TravelPackage::findOrFail($id);// jika data di ada maka di munculkan jika tidak eror 404
         return view('pages.admin.travel-package.update',['item'=>$item]);
     }
@@ -79,7 +80,7 @@ class TravelPackageController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(TravelPackageRequest $request, $id)
+    public function update(ptReq $request, $id)
     {
         $data= $request->all();//ambil semua isi form
          $data['slug'] = Str::slug($request->title);

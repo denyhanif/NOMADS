@@ -3,7 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-//use App\Http\Requests\Admin\GalleryRequest;
+use App\Http\Requests\Admin\GalleryRequest;
+use App\Http\Request\Admin\Galreq;
 use App\Gallery;
 use App\TravelPackage;
 use Illuminate\Http\Request;
@@ -44,7 +45,7 @@ class GalleryController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(GalleryRequest $request)
     {
         $data = $request->all();
         $data['image'] = $request->file('image')->store(
@@ -78,7 +79,7 @@ class GalleryController extends Controller
         $item = Gallery::findOrFail($id);
         $travel_packages = TravelPackage::all();
 
-        return view('pages.admin.gallery.edit',[
+        return view('pages.admin.gallery.update',[
             'item' => $item,
             'travel_packages' => $travel_packages
         ]);
@@ -91,7 +92,7 @@ class GalleryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(GalleryRequest $request, $id)
     {
         $data = $request->all();
         $data['image'] = $request->file('image')->store(
