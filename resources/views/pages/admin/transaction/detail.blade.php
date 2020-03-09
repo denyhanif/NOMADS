@@ -36,7 +36,7 @@
                         </tr>
                         <tr>
                             <th>Addtional Visa</th>
-                            <td>${{$item->addtional_visa}}</td>
+                            <td>${{$item->additional_visa}}</td>
                         </tr>
                         <tr>
                             <th>Total Transaksi</th>
@@ -63,6 +63,7 @@
                                         <td>{{$detail->transaction->travel_package->title}}</td>
                                         <td>{{$detail->username}}</td>
                                         <td>{{$detail->nationality}}</td>
+
                                         <td>{{$detail->is_visa?'30 Days':'N/A'}}</td>
                                         <td>{{$detail->doe_passport}}</td>
                                     </tr>   

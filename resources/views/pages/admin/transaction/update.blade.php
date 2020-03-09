@@ -21,48 +21,19 @@
                 {{--  form  --}}
                 <div class="card shadow">
                     <div class="card-body">
-                        <form action="{{route('travel-package.update',$item->id)}}" method="post">
+                        <form action="{{route('transaction.update',$item->id)}}" method="post">
                             @method('PUT')
                             @csrf
-                            <div class="form-group">
-                                <label for="title">Title</label>
-                                <input type="text" class="form-control" name="title" placeholder="Title" value="{{$item->title}}">
-                            </div>
-                            <div class="form-group">
-                                <label for="location">Location</label>
-                                <input type="text" class="form-control" name="location" placeholder="Location" value="{{$item->location}}">
-                            </div>
-                            <div class="form-group">
-                                <label for="about">About</label>
-                                <textarea name="about" rows="10" class="d-block w-100 form-control">{{$item->about}}</textarea>
-                            </div>
-                            <div class="form-group">
-                                <label for="featured_event">Features Event</label>
-                                <input type="text" class="form-control" name="featured_event" placeholder="featured_event" value="{{$item->featured_event}}">
-                            </div>
-                            <div class="form-group">
-                                <label for="language">Language</label>
-                                <input type="text" class="form-control" name="language" placeholder="language" value="{{$item->language}}">
-                            </div>
-                            <div class="form-group">
-                                <label for="foods">Foods</label>
-                                <input type="text" class="form-control" name="foods" placeholder="foods" value="{{$item->foods}}">
-                            </div>
-                            <div class="form-group">
-                                <label for="departure_date">Departured date</label>
-                                <input type="date" class="form-control" name="departure_date" placeholder="Departured date" value="{{$item->departure_date}}">
-                            </div>
-                            <div class="form-group">
-                                <label for="duration">Duration</label>
-                                <input type="text" class="form-control" name="duration" placeholder="Durasi" value="{{$item->duration}}">
-                            </div>
-                            <div class="form-group">
-                                <label for="type">Type</label>
-                                <input type="text" class="form-control" name="type" placeholder="Type" value="{{$item->type}}">
-                            </div>
-                            <div class="form-group">
-                                <label for="price">Price</label>
-                                <input type="number" class="form-control" name="price" placeholder="Harga" value="{{$item->price}}">
+                            <div  class="form-group">
+                                <label for="title" > Status</label>
+                                <select name="transaction_status"  required class="form-control">
+                                    <option value="{{$item->transaction_status}}"> Jangan Ubah ({{$item->transaction_status}})</option>
+                                    <option value="IN_CART">In Cart</option>
+                                    <option value="PENDING">Pending</option>
+                                    <option value="SUCESS">Sucess</option>
+                                    <option value="CANCEL">Cancel</option>
+                                    <option value="FAILED">Failed</option>
+                                </select>
                             </div>
                             <button type="submit" class="btn btn-primary btn-block">
                                 Ubah
@@ -70,6 +41,28 @@
                         </form>
                     </div>
                 </div>
+                {{--  <div class="card shadow">
+                    <div class="card-body">
+                        <form action="{{ route('transaction.update', $item->id) }}" method="post">
+                            @method('PUT')
+                            @csrf
+                            <div class="form-group">
+                                <label for="title">Status</label>
+                                <select name="transaction_status" required class="form-control">
+                                    <option value="{{ $item->transaction_status }}">Jangan Ubah ({{ $item->transaction_status }})</option>
+                                    <option value="IN_CART">In Cart</option>
+                                    <option value="PENDING">Pending</option>
+                                    <option value="SUCCESS">Success</option>
+                                    <option value="CANCEL">Cancel</option>
+                                    <option value="FAILED">Failed</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">
+                                Ubah
+                            </button>
+                        </form>
+                    </div>
+                </div>  --}}
     </div>
     
 @endsection

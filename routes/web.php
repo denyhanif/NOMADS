@@ -12,11 +12,26 @@
 */
 
 Route::get('/', 'HomeController@index')->name('home');
-Route::get('/detail', 'DetailController@index')->name('detail');
-Route::get('/checkout', 'CheckoutController@index')->name('checkout');
-Route::get('/checkout/sucess', 'CheckoutController@sucess')->name('checkout-sucess');
+Route::get('/detail/{slug}', 'DetailController@index')->name('detail');
+//check out guest/verified
 
+Route::post('/checkout/{id}','CheckoutController@process')
+    ->name('checkout-process')->middleware(['auth','verified']);//memproses data dari checkout,, di arahkan ke checkout-process
 
+Route::get('/checkout/{id}','CheckoutController@index')
+    ->name('checkout')->middleware(['auth','verified']);
+
+Route::post('/checkout/create/{detail_id}','CheckoutController@create')
+    ->name('checkout-create')//invite member lain
+    ->middleware(['auth','verified']);
+
+Route::get('/checkout/remove/{detail_id}','CheckoutController@remove')
+    ->name('checkout-remove')//hapus member
+    ->middleware(['auth','verified']);
+
+Route::get('/checkout/confirm/{id}','CheckoutController@sucess')
+    ->name('checkout-sucess')
+    ->middleware(['auth','verified']);//menganti data status transaksi(chart)
 
 
 Route::prefix('admin')

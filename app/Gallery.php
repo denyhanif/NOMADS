@@ -17,6 +17,9 @@ class Gallery extends Model
     protected $hidden=[];
 
     //relasi gallery dan travel packags
+    // public function travel_package(){
+    //     return $this->belongsTo(TravelPackage::class,'id','id');
+    // }
     public function travel_package(){
         return $this->belongsTo(TravelPackage::class,'travel_packages_id','id');
     }

@@ -64,7 +64,9 @@ class TransactionController extends Controller
      */
     public function edit($id)
     {
-        //
+        $item = Transaction::findOrFail($id);
+
+        return view ('pages.admin.transaction.update',['item'=>$item]);
     }
 
     /**
@@ -74,10 +76,14 @@ class TransactionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(TransactionRequest $request, $id)
     {
-        //
-    }
+        $data = $request->all();
+        $item = Transaction::findOrFail($id);
+
+        $item->update($data);
+        return redirect()->route('transaction.index');
+        }
 
     /**
      * Remove the specified resource from storage.
@@ -87,6 +93,8 @@ class TransactionController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $item= Transaction::findOrFail($id);
+        $item->delete();
+        return redirect()->route('transaction.index');
     }
 }

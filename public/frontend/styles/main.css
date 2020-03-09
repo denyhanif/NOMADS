@@ -5,14 +5,12 @@ body {
 }
 
 .btn-login {
-  background-color: #071C4D;
-  color: #ffffffff;
-}
+  background-color: #F8B400;
+  color: #1B262C;}
 
 .btn-login:hover {
-  background-color: #071C4D;
-  color: #ffffffff;
-}
+  background-color:rgb(253, 207, 78);
+  color: #ffff;}
 
 .navbar-brand img {
   max-height: 40px;
@@ -38,12 +36,12 @@ body {
 header {
   padding: 180px 0px 165px;
   margin-top: -70px;
-  background-image: url("../images/header.jpg");
+  background-image: url("../images/header3.jpg");
   background-size: cover;
 }
 
 header h1, header p {
-  color: #ffffffff;
+  color: #1B262C;
   font-weight: bold;
 }
 
@@ -73,24 +71,27 @@ header .btn-get-startedhover {
 
 .section-stats .statis-detail {
   padding-top: 15px;
-  background-color: #ffffffff;
-  border-radius: 5px;
+  background-color: #1B262C;
   padding-left: 40px;
 }
 
 h2 {
+  text-align: center;
+  color: white;
   font-size: 30px;
   margin-bottom: 0;
 }
 
 p {
+  text-align: center;
+  color: white;
   font-size: 20px;
   font-weight: lighter;
 }
 
 .section-popular {
   min-height: 540px;
-  background-color: #05133D;
+  background-color: #F8B400;
   margin-top: -50px;
   margin-bottom: -230px;
 }
@@ -100,7 +101,7 @@ p {
 }
 
 .section-popular-heading h2, .section-popular-heading p {
-  color: #ffffffff;
+  color: #1B262C;
 }
 
 .section-popular-heading h2 {

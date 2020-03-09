@@ -5,12 +5,10 @@ body{
 }
 
 .btn-login{
-    background-color: #071C4D;
-    color: #ffffffff;
-    &:hover{
-        background-color: #071C4D;
-        color: #ffffffff;
-    }
+    background-color: #F8B400;
+    color: #1B262C;    &:hover{
+        background-color: rgb(253, 207, 78);
+        color: #ffff;    }
 
 }
 .navbar-brand{
@@ -45,10 +43,10 @@ body{
 header{
     padding: 180px 0px 165px;
     margin-top: -70px;
-    background-image: url('../images/header.jpg');
+    background-image: url('../images/night.jpg');
     background-size: cover;
     h1,p{
-        color: #ffffffff;
+        color:  #1B262C;;
         font-weight: bold;
     }
 
@@ -79,24 +77,26 @@ header{
 
     .statis-detail{
         padding-top: 15px;
-        background-color: #ffffffff;
-        border-radius: 5px;
+        background-color: #1B262C;
         padding-left: 40px;
     }
 }
 
 h2{
+    color: white;
     font-size: 30px;
     margin-bottom: 0;
 }
 p{
+    color: white;
+
     font-size: 20px;
     font-weight: lighter;
 }
 //populAR
 .section-popular{
     min-height:540px;
-    background-color: #05133D;
+    background-color: #F8B400;
     margin-top: -50px;
     margin-bottom: -230px;
 }
@@ -120,7 +120,7 @@ p{
     .section-popular-travel{
         .card-travel{
             min-height: 380px;
-            background-color: #E4E6EB;
+            background-color: #1B262C;
             color: #05133D;
             padding:30px;
             background-size: cover;
@@ -161,7 +161,6 @@ p{
     h2{
 
         font-family: 'Playfair Display',serif;
-
         font-weight: bold;
         font-size: 40px;
         text-align: left;
