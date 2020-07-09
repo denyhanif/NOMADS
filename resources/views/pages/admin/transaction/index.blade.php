@@ -14,18 +14,18 @@
                 <div class="row">
                     <div  class="card-body">
                         <div class="table-responsive">
+                            <th>User</th>
                             <table class="table table-bordered" width="100%" cellspacing="0">
                                 <thead>
                                     <tr>
                                         <th>ID</th>
                                         <th>Travel</th>
-                                        <th>User</th>
                                         <th>Visa</th>
                                         <th>Total</th>
                                         <th>Status</th>
                                         <th>Action</th>
+                                    </thead>  
                                     </tr>
-                                </thead>  
                                 <tbody>
                                    @forelse ($items as $item)
                                      <tr>
